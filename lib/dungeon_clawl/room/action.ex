@@ -1,5 +1,5 @@
 defmodule DungeonClawl.Room.Action do
-  alias DungeonClawn.Room.Action
+  alias DungeonClawl.Room.Action
   defstruct label: nil, id: nil
 
   def forward, do: %Action{id: :forward, label: "Move forward"}
