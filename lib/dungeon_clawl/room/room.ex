@@ -1,5 +1,5 @@
 defmodule DungeonClawl.Room do
-  alias DungeonClawl.Romm
+  alias DungeonClawl.Room
 
   import DungeonClawl.Room.Action
 

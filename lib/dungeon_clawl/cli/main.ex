@@ -5,6 +5,17 @@ defmodule DungeonClawl.CLI.Main do
     welcome_message()
     Shell.prompt("Press Enter to continue")
     hero_choice()
+    crawl(DungeonClawl.Room.all())
+  end
+
+  defp crawl(rooms) do
+    Shell.info("You keep moving forward to the next room.")
+    Shell.prompt("Press Enter to continue...")
+    Shell.cmd("clear")
+
+    rooms
+    |> Enum.random
+    |> DungeonClawl.CLI.RoomActionsChoice.start
   end
 
   defp welcome_message do
